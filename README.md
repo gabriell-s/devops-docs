@@ -1,44 +1,61 @@
-# devops-docs
+# DevOps Documentation
 
-Regarding the settings for each project:
-The settings for each project repository must be in their README.
+## Project Settings
 
-Regarding programming standards:
-We will use gitflow where we have the main branch which would be for production and the development branch which would be for staging.
-No development should be done directly in main or directly in development, it must have its own branch and the merge must be done via PR (Pull Request).
+Each project repository must contain its specific settings in its **README** file.
 
-## Branch
+## Programming Standards
 
-Branches must be named following the structure **<type>/[issue-id]/<description>**. For branches without issue, just use **<type>/<description>**
-A branch deve ser nomeada seguindo a estrutura <type>/[issue-id]/<description> para branch sem um issue de referencia pode ser utilizado <type>/<description>.
+We will use **GitFlow**, where:
 
+- The **main** branch is designated for **production**.
+- The **development** branch is designated for **staging**.
 
-* <type> → Defines the branch purpose (feature, bugfix, hotfix, release, etc.).
-* [issue-id] (optional) → Number issue in the management system (Jira, GitHub Issues, etc.).
-* <description> → A short and descriptive name for the task.
+No development should be done directly in `main` or `development`. Every change must be made in a **separate branch**, and the merge must be performed via **Pull Request (PR)**.
 
-The types are:
-[feature/]: To Feature branches
-[release/]: To Release branches
-[hotfix/]: To Hotfix branches
-[bugfix/]: To Bugfix branches
-[support/]: To Support branches
-[]: To Version tag prefix
+## Branch Naming Convention
 
-## Pull request
+Branches must follow the structure:
 
-The PR must have at least 1 (one) reviewer and if exists must follow the template configured in each repository.
-One sample collected from [GitHub pull request template](https://axolo.co/blog/p/part-3-github-pull-request-template) can be found in the **.github** folder with 
-PULL_REQUEST_TEMPLATE.md (link)[.github/PULL_REQUEST_TEMPLATE.md] name.
+- **For branches linked to an issue:**\
+  **`<type>/[issue-id]/<description>`**
+- **For branches without an issue reference:**\
+  **`<type>/<description>`**
 
+### Structure:
 
-## Commit
-For the commits we will use the convencional commits.
-'''
+- **`<type>`** → Defines the branch purpose (e.g., `feature`, `bugfix`, `hotfix`, `release`, etc.).
+- **`[issue-id]`** (optional) → Corresponding issue number in the management system (e.g., Jira, GitHub Issues).
+- **`<description>`** → A short and descriptive name for the task.
+
+### Allowed Branch Types:
+
+- **`feature/`** → Feature branches
+- **`release/`** → Release branches
+- **`hotfix/`** → Hotfix branches
+- **`bugfix/`** → Bugfix branches
+- **`support/`** → Support branches
+- **`<version>`** → Version tag prefix
+
+## Pull Requests
+
+- Every PR must have at least **one reviewer**.
+- If applicable, the PR must follow the **template configured in the repository**.
+- A sample PR template from [GitHub Pull Request Template](https://axolo.co/blog/p/part-3-github-pull-request-template) can be found in the **`.github`** folder under the name **`PULL_REQUEST_TEMPLATE.md`**.
+
+## Commit Convention
+
+We follow the **Conventional Commits** standard. The commit message format should be:
+
+```
 <type>[optional scope]: <description>
 
-    [optional body]<issues references>
+    [optional body]
+    <issues references>
+```
 
-'''
-Although the body is optional, it is interesting to put the numbers of the issues involved inside it. If don't want describe, just put the numbers of issues involved.
+### Guidelines:
+
+- The **body** is optional but should include issue numbers when relevant.
+- If no description is needed, at least provide the issue numbers involved.
 
