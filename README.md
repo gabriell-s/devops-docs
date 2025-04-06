@@ -1,5 +1,16 @@
 # DevOps Documentation
 
+## About the Project
+
+Imagine a digital space where book lovers can connect and share their literary experiences. Our proposal is to create a **social network for books**, where each user can:
+
+- **Follow their favorite books and authors**, receiving updates on new works and releases.
+- **Leave detailed reviews** of the books they have read, helping other readers discover new stories.
+- **Rate their favorite books**, providing valuable insights for others to decide whether to purchase a book.
+- **Comment on reviews** and interact with fellow readers, forming a vibrant community passionate about literature.
+
+Each user will have their own account, offering a personalized and unique experience where their preferences and readings are easily accessible. At this initial stage, we are focusing on creating a **CRUD for books**, allowing users to add and edit information about their favorite works.
+
 ## Project Settings
 
 Each project repository must contain its specific settings in its **README** file.
